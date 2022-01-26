@@ -20,4 +20,4 @@ pip install functools
 
 MIT
 
-[PlDb]: https://github.com/Porvoon-kehitysyksikko/Vaestoennuste/blob/master/Dokumentaatio/Palveluvaestoennusteen_toteutus.pdf>
+[PlDb]: https://github.com/Porvoon-kehitysyksikko/Vaestoennuste/tree/main/Dokumentaatio/Palveluvaestoennusteen_toteutus.pdf>
