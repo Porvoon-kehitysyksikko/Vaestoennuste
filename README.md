@@ -7,7 +7,7 @@ Python ympäristössä kirjastojen asentaminen onnistuu ympäristöstä riippuen
 ```sh
 pip install numpy
 pip install pandas
-pip install pandas
+pip install functools
 ```
 
 ## Documentaatio
