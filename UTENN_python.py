@@ -18,11 +18,11 @@ def main():
 
     # *TIEDOSTOT JA YEISPARAMETRIT;
     # *Asuntotuotannon osa-alue-ennusteen tiedosto Excelissä sekä taulun nimi;
-    Astuot = 'SASExcel\\Astuot_alue_pilotti.xlsx'
+    Astuot = 'Parametrit\\Astuot_alue_pilotti.xlsx'
     # /* Vaihtoehto;
     # *Asuntotuotantotiedoston nimi LIB-viiteineen, SAS-data;
     # *Tulostiedoston (Ennuste) nimi polkuineen ja taulun nimi Excelissä;
-    utenn_exc = 'SASExcel\\UTenn_alue_pilotti.xlsx'
+    utenn_exc = 'Parametrit\\UTenn_alue_pilotti.xlsx'
     # *Lähtövuosi (=1. asuntotuotantovuoden vuosiluku) ja ennustevuosi (=as.tuotannon ja väestöennusteen viimeinen vuosi);
     lvuosi = 2020
     evuosi = 2035
@@ -34,15 +34,15 @@ def main():
     # *PARAMETRITIEDOSTOT EXCEL;
     # *Erikseen Excel-tiedoston nimi ja taulun nimi;
     # *hedelmällisyys;
-    hed_exc = 'SASExcel\\PKS_Hed_2021.xlsx'
+    hed_exc = 'Parametrit\\PKS_Hed_2021.xlsx'
     # *kuolemanvaara;
-    kuo_exc = 'SASExcel\\PKS_KV_2021.xlsx'
+    kuo_exc = 'Parametrit\\PKS_KV_2021.xlsx'
     # *Jäljellejäämiskertoimet;
-    JJ_exc = 'SASExcel\\UT_JJkert_pilotti.xlsx'
+    JJ_exc = 'Parametrit\\UT_JJkert_pilotti.xlsx'
     # *Asuntotyyppien parametrit;
-    UTtyyp_exc = 'SASExcel\\UT_param_pilotti.xlsx'
+    UTtyyp_exc = 'Parametrit\\UT_param_pilotti.xlsx'
     # *Asuntotyyppien ikäjakauma alkutilanteessa;
-    UTika_exc = 'SASExcel\\UT_ikajak_pilotti.xlsx'
+    UTika_exc = 'Parametrit\\UT_ikajak_pilotti.xlsx'
 
     # *TÄSTÄ ETEENPÄIN KÄYTTÄJÄN EI TARVITSE MUUTTAA MITÄÄN (JOS HOMMA TOIMII);
 

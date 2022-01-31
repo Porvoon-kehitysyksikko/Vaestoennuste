@@ -21,10 +21,10 @@ def main():
 
     # *Anna alue-ennusteen SAS-tiedostojen nimet ml. LIBname;
     # *Vanhan kannan alueellinen ennustetiedosto;
-    VKdata0 = 'VHenn_alue_ylakoulut.xlsx'
+    VKdata0 = 'VKenn_Ve1_2021_varhaiskasvatus.xlsx'
     VKdata0 = pd.read_excel(VKdata0)
     # *Uustuotannon alueellinen ennustetiedosto;
-    UTdata0 = 'UTenn_alue_ylakoulut.xlsx'
+    UTdata0 = 'UTenn_alue_varhaiskasvatus.xlsx'
     UTdata0 = pd.read_excel(UTdata0)
     #*Yhdistetty ennustetiedosto ilman täsmäystä;
     YHDdata0 = 'YHD_testi.xlsx'

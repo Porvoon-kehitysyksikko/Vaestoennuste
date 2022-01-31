@@ -14,11 +14,14 @@ warnings.filterwarnings("ignore")
 # Käännöstä Pythoniin työstänyt Miro Varilo
 
 def main():
+    # sasvertaus = pd.read_sas('hs_ve0_2019_2040.sas7bdat')
+    # tulostaTaulukko(sasvertaus, 'SASvertaus.xlsx')
+
     # #TIEDOSTOT JA YEISPARAMETRIT;
     # #Lähtötiedoston nimi LIB-viiteineen, SAS-data;
-    ltied_sas = 'vaesto2019.sas7bdat'
+    ltied_sas = 'Parametrit\\vaesto2019.sas7bdat'
     # #Tulostiedoston (Ennuste) nimi, SAS-data, ei käytössä
-    etied = pd.read_sas('hs_ve0_2019_2040.sas7bdat')
+    etied = pd.read_sas('Parametrit\\hs_ve0_2019_2040.sas7bdat')
     # #Tulostiedoston (Ennuste) nimi polkuineen ja taulun nimi Excelissä;
     enn_exc = 'HS_Ve0_2019_2040.xls'
     enn_taul = 'Ve0'
@@ -31,27 +34,27 @@ def main():
     # #PARAMETRITIEDOSTOT EXCEL;
     # #Erikseen Excel-tiedoston nimi ja taulun nimi;
     # #hedelmällisyys;
-    hed_exc = 'SASExcel\\Hedelmallisyys.xls'
+    hed_exc = 'Parametrit\\Hedelmallisyys.xls'
     # kuolemanvaara;
-    kuo_exc = 'SASExcel\\Kuolemanvaara.xls'
+    kuo_exc = 'Parametrit\\Kuolemanvaara.xls'
     kuo_taul = 'Ve0'
     # HS sisäinen lähtömuutto;
-    hsl_exc = 'SASExcel\\HSsis_lahto_2017_19.xls'
+    hsl_exc = 'Parametrit\\HSsis_lahto_2017_19.xls'
     hsl_taul = 'Ve0'
     # HS sisäinen tulomuutto;
-    hst_exc = 'SASExcel\\HSsis_tulo_2017_19.xls'
+    hst_exc = 'Parametrit\\HSsis_tulo_2017_19.xls'
     hst_taul = 'Ve0'
     # Työmarkkina lähtömuutto;
-    tml_exc = 'SASExcel\\Tyomark_lahto_2017_19.xls'
+    tml_exc = 'Parametrit\\Tyomark_lahto_2017_19.xls'
     tml_taul = 'Ve0'
     # Työmarkkina tulomuutto;
-    tmt_exc = 'SASExcel\\Tyomark_tulo_2017_19.xls'
+    tmt_exc = 'Parametrit\\Tyomark_tulo_2017_19.xls'
     tmt_taul = 'Ve0'
     # Ulkomainen lähtömuutto;
-    uml_exc = 'SASExcel\\Ulkom_lahto_2017_19.xls'
+    uml_exc = 'Parametrit\\Ulkom_lahto_2017_19.xls'
     uml_taul = 'Ve0'
     # Ulkomainen tulomuutto;
-    umt_exc = 'SASExcel\\Ulkom_tulo_2017_19.xls'
+    umt_exc = 'Parametrit\\Ulkom_tulo_2017_19.xls'
     umt_taul = 'Ve0'
 
     # TÄSTÄ ETEENPÄIN KÄYTTÄJÄN EI TARVITSE MUUTTAA MITÄÄN (NORMAALITILANTEESSA);
@@ -190,7 +193,6 @@ def main():
     smlyht = ennuste['smlyht']
     iyht = ennuste['iyht']
 
-    counter = 0
     synt = 0
 
 

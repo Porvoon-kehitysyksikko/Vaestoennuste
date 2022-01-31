@@ -17,10 +17,10 @@ def main():
     # *VAIHE 1: ANNETAAN PARAMETREILLE ARVOT TAI MUUTETAAN VANHOJA ARVOJA
     # *TIEDOSTOT JA YEISPARAMETRIT
     # *Kunnan osa-aluetiedoston nimi LIB-viiteineen, SAS-data; *Alla esimerkki, ei käytössä
-    # ltied = pd.read_sas('SASExcel\\vaesto2019.sas7bdat')
+    # ltied = pd.read_sas('Parametrit\\vaesto2019.sas7bdat')
     # /* Vaihtoehto käytössä
     # *Kunnan osa-aluetiedosto Excelissä sekä taulun nimi; *Alla esimerkit
-    Vaesto = 'SASExcel\\Lahto_vaesto_2019_testi.xlsx'
+    Vaesto = 'Parametrit\\Lahto_vaesto_2019_pilotti.xlsx'
     # *Tulostiedoston (Ennuste) nimi polkuineen ja taulun nimi Excelissä; *Alla esimerkit;
     enn_exc = 'VKenn_Ve1_2019_2040.xlsx'
     enn_taul = 'Ve1'
@@ -33,13 +33,13 @@ def main():
     # *PARAMETRITIEDOSTOT EXCEL;
     # *Erikseen Excel-tiedoston nimi ja taulun nimi; *Alla pilottiversion parametrit testausta varten
     # *hedelmällisyys;
-    hed_exc = 'SASExcel\\PKS_hed_2021.xlsx'
+    hed_exc = 'Parametrit\\PKS_hed_2021.xlsx'
     # *kuolemanvaara;
-    kuo_exc = 'SASExcel\\PKS_kv_2021.xlsx'
+    kuo_exc = 'Parametrit\\PKS_kv_2021.xlsx'
     # *muuttoliike;
-    ml_exc = 'SASExcel\\VK_muutto_pilotti.xlsx'
+    ml_exc = 'Parametrit\\VK_muutto_pilotti.xlsx'
     # *alueiden tyypittelyparametrit;	*Pilottitaulussa Hgin testiain., Espooseen ja Vantaalle tehtävä oma versio vastaavasti
-    alue_exc = 'SASExcel\\VK_param_pilotti.xlsx'
+    alue_exc = 'Parametrit\\VK_param_pilotti.xlsx'
 
     print('Vaihe 1 onnistui')
 
@@ -102,7 +102,7 @@ def main():
         kuo, on=['kvtyyp', 'vuosi'], how='left')
     vaes_alue_muut_hed_KV.sort_values(by=['alue', 'vuosi'])
 
-    print('Vaihe 3 onnistui')
+    print('Vaihe 3 onnistui. Aloitetaan ennusteen tekeminen (vie aikaa...)')
 
     # *VAIHE 4: 	ENNUSTEEN LASKENTA ;
     # Poimitaan ennustejakson vuodet, ml. lähtövuosi;
@@ -273,28 +273,6 @@ def main():
     print('Vaihe 4 onnistui')
 
     # *VAIHE 5: TULOSTETAAN ENNUSTE EXCEL-TAULUKSI
-
-    # *Lasketaan alueiden summa;
-    # proc summary data=ennuste nway;
-    #   class vuosi;
-    #   var iyht m0-m99 n0-n99 myht nyht synt kuol tmyht lmyht;
-    #   output out=aluesumma(drop=_type_ _freq_) sum=;
-    # run;
-    # data aluesumma; length alue 8; set aluesumma; alue=0; run;
-    # *Tulostetaan pysyvään tiedostoon parametrit ym. poistettuna;
-    # data &VKetied; set aluesumma ennuste ; by alue;
-    #   if alue=. then alue=0;	*Aluesumma: alue=0;
-    #   muutos=iyht-lag(iyht); if first.alue then muutos=.;
-    #   lmuutos=synt-kuol;
-    #   nmuutto=tmyht-lmyht;
-    #   keep alue vuosi iyht--n99 	muutos myht nyht lmuutos synt kuol nmuutto;
-    # run;
-    # ennuste.update(mi)
-    # ennuste.update(ni)
-    # print(iyht)
-
-    # *Tulostus Excel-tiedostoksi pysyvästä SAS-tiedostosta;
-
     # Tulostus Excel-tiedostoksi
     lista = ['alue', 'vuosi', 'iyht', 'tmyht', 'lmyht']
     lista = lista + men + women
